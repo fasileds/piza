@@ -1,0 +1,141 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 380px;
+  height: 620px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.cardTop {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.topImage {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .topImage {
+  transform: scale(1.05);
+}
+
+.cardMidle {
+  padding: 25px;
+  text-align: center;
+}
+
+.pizzaName {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.pizzaIngredients {
+  font-size: 15px;
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.components2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.currency {
+  font-size: 14px;
+  color: #ff8100;
+  font-weight: 500;
+  margin-bottom: -8px;
+}
+
+.pizzaPrice {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff8100;
+}
+
+.orderButton {
+  padding: 12px 25px;
+  background-color: #ff8100;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.orderButton:hover {
+  background-color: #e66900;
+  transform: scale(1.05);
+}
+
+.cardbottom {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-top: 2px solid #eaeaea;
+  background-color: #f9f9f9;
+}
+
+.userImage {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.restaurantName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardTop {
+    height: 250px;
+  }
+
+  .pizzaPrice {
+    font-size: 26px;
+  }
+
+  .orderButton {
+    padding: 10px 20px;
+  }
+
+  .userImage {
+    width: 45px;
+    height: 45px;
+  }
+}

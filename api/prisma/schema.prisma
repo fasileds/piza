@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id         String  @default(uuid()) @id
+  emaile     String  @unique
+  passworde  String
+  name       String
+  roles      Role[]  @relation("UserRoles")  // Many-to-many relationship with Role
+  orders     Order[] // One-to-many relationship with Order
+}
+
+model Restorant {
+  id            String   @default(uuid()) @id
+  emaile        String   @unique
+  passworde     String
+  name          String
+  location      String
+  phoneNumber   String
+  restorantName String
+  logo          String
+  pizzas        Piza[]   // One-to-many relationship with Piza
+}
+
+model Role {
+  id          String  @default(uuid()) @id
+  name        String  @unique
+  description String?
+  users       User[]  @relation("UserRoles")  // Many-to-many relationship with User
+}
+
+model Piza {
+  id         String   @default(uuid()) @id
+  name       String
+  topping    String[]  
+  price      Float      
+  restorant  Restorant @relation(fields: [restorantId], references: [id])
+  restorantId String    
+  orders     Order[]   // One-to-many relationship with Order
+}
+
+model Order {
+  id          String   @default(uuid()) @id
+  user        User     @relation(fields: [userId], references: [id]) // Relation to User
+  userId      String
+  piza        Piza     @relation(fields: [pizaId], references: [id]) // Relation to Piza
+  pizaId      String
+  topping    String[]
+  quantity    Int      // Number of pizzas ordered
+  totalPrice  Float    // Calculated total price
+  createdAt   DateTime @default(now()) // Timestamp when the order was created
+}

@@ -1,0 +1,8 @@
+.cardComponents {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #ffffff 0%, #ffc993 76%, #fff8f1 100%);
+}

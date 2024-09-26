@@ -1,0 +1,135 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 450px; /* Slightly increased for better balance */
+  background: linear-gradient(180deg, #fff 0%, #ffc993 76%, #fff8f1 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative; /* For positioning the images */
+}
+
+.leftHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 25px; /* Increased spacing between elements */
+  padding: 30px;
+}
+
+.headerTitle h1 {
+  font-size: 64px; /* Increased font size */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff8100, #ffbe71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+  letter-spacing: 1px; /* Added subtle letter spacing */
+}
+
+.headerText span {
+  font-size: 18px;
+  color: #555; /* Darkened for better readability */
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.headerSerch {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px; /* Adjusted padding */
+  background-color: white;
+  border: 2px solid rgba(255, 129, 0, 0.7);
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headerSerch input {
+  flex: 1;
+  padding: 12px 20px; /* Adjusted padding for better usability */
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.headerSerch input::placeholder {
+  color: #aaa;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 137, 15, 1);
+  border-radius: 50%;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.headerSerch:hover {
+  border-color: rgba(255, 129, 0, 1);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rightHeader {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.rightHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.image1 {
+  width: 200px; /* Adjusted width */
+  height: auto; /* Keep aspect ratio */
+  position: absolute;
+  top: 15%; /* Re-positioned for balance */
+  left: 55%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image2 {
+  width: 300px; /* Adjusted width */
+  height: 500px; /* Keep aspect ratio */
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image1:hover,
+.image2:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,136 @@
+/* Footer Container */
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #222, #333);
+  color: #fff;
+  padding: 50px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #444;
+}
+
+.footerTopLeft ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerTopLeft ul li {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footerTopLeft ul li:hover {
+  color: #ff8100;
+}
+
+.footerTopright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rightTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rightTop img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.rightTop span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff8100;
+}
+
+.rightBotom {
+  display: flex;
+  align-items: center;
+}
+
+.rightBotom input {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+  background-color: #555;
+  color: #fff;
+}
+
+.rightBotom input::placeholder {
+  color: #ccc;
+}
+
+.rightBotom .MuiSvgIcon-root {
+  background-color: #ff8100;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rightBotom .MuiSvgIcon-root:hover {
+  background-color: #e66900;
+}
+
+.footerBotom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.footerBotomLeft {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footerBotomLeft span {
+  margin-right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footerBotomLeft span:hover {
+  color: #ff8100;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerTopLeft ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rightBotom input {
+    width: 200px;
+  }
+}
