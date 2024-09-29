@@ -1,4 +1,4 @@
-import prisma from "..";
+import prisma from "../index.js";
 
 export const getAllUser = async (req, res) => {
   try {

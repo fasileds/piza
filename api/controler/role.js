@@ -1,4 +1,4 @@
-import prisma from "..";
+import prisma from "../index.js";
 
 export const createRole = async (req, res) => {
   try {

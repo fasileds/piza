@@ -1,0 +1,112 @@
+/* General layout */
+.sidBar {
+  width: 300px;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the sidebar */
+  border-radius: 10px; /* Smooth edges */
+}
+
+.sidBarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidBarTop h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menuIcon {
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+.sidbarBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.sidbarProfile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sidbarImage {
+  width: 80px;
+  height: 80px;
+}
+
+/* Menu section */
+.sidbarMenu {
+  flex: 1;
+}
+
+.sidbarItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f4f4f4; /* Light background color */
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow to lift the menu item */
+  text-decoration: none; /* Remove underline from Link */
+  color: #333; /* Default text color */
+}
+
+.sidbarItem:hover {
+  transform: translateX(10px); /* Subtle slide effect */
+  color: #ffffff; /* Text color on hover */
+  background-color: #ff5200; /* Brand color on hover */
+}
+
+.sidbarIcon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Active menu item styling */
+.active {
+  background-color: #ff9f50; /* Lighter shade of the brand color for the active page */
+  color: #ffffff;
+}
+
+.sidbarLogout {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f4f4f4; /* Same as menu background */
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.sidbarLogout:hover {
+  transform: translateX(10px);
+  color: #ffffff;
+  background-color: #ff5200; /* Matches the hover effect in the menu */
+}
+
+.logoutIcon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+span {
+  font-size: 18px;
+  color: #333;
+}

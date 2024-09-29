@@ -1,4 +1,4 @@
-import prisma from ".."; // Ensure the path is correct
+import prisma from "../index.js"; // Ensure the path is correct
 import bcrypt from "bcryptjs";
 import { z } from "zod";
 import jwt from "jsonwebtoken";

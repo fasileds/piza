@@ -1,4 +1,4 @@
-import prisma from "..";
+import prisma from "../index.js";
 
 export const createOrder = async (req, res) => {
   const { userId, pizaId, quantity, topping } = req.body;

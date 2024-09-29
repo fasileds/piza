@@ -1,4 +1,4 @@
-import prisma from "..";
+import prisma from "../index.js";
 
 export const createPiza = async (req, res) => {
   const { name, topping, price, restorantId } = req.body;

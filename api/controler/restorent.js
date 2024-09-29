@@ -1,4 +1,4 @@
-import prisma from "..";
+import prisma from "../index.js";
 import bcrypt from "bcryptjs";
 
 export const createRestorent = async (req, res) => {
@@ -42,7 +42,20 @@ export const getAllRestorents = async (req, res) => {
     res.status(500).json({ message: "Internal server error." });
   }
 };
+export const getSingleRestorant = async (req, res) => {
+  const { id } = req.body;
 
+  try {
+    const restorant = await prisma.restorant.findUnique({
+      where: {
+        id: id,
+      },
+    });
+    res.json(restorant);
+  } catch (error) {
+    res.json(error);
+  }
+};
 export const deleteRestorent = async (req, res) => {
   const { id } = req.params;
   try {

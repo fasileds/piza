@@ -1,0 +1,50 @@
+/* Flexbox layout for the sidebar and navbar */
+.layoutContainer {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #f7f7f7; /* Light background for the layout */
+}
+
+/* Admin Navbar Styling */
+.adminNavbar {
+  flex: 0 0 80%; /* Fixed width for AdminNavbar */
+  max-width: 1200px; /* Max width to keep it responsive */
+  padding: 20px; /* Optional padding for navbar content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  background-color: #fafafa; /* Light grey background for AdminNavbar */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px auto; /* Center the navbar horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Navbar content spread across */
+  overflow-y: auto; /* Ensure the content inside AdminNavbar scrolls if too large */
+}
+
+/* Scrollbar styling for adminNavbar */
+.adminNavbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.adminNavbar::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 4px;
+}
+
+.adminNavbar::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+/* Table Styling */
+.tableContainer {
+  flex: 0 0 80%; /* Fixed width for the table */
+  max-width: 1100px; /* Max width to keep it responsive */
+  margin: 20px auto; /* Center the table horizontally */
+  padding: 20px; /* Optional padding for the table */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 10px; /* Rounded corners for the table */
+}
+
+.MuiDataGrid-root {
+  width: 100%; /* Full width for the DataGrid */
+}
